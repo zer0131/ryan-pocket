@@ -45,3 +45,7 @@ app/logs/
 vendor/
 composer.lock
 
+# 前端忽略的文件
+websrc/node_modules/
+websrc/npm-debug.log
+
