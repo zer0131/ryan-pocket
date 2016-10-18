@@ -19,7 +19,7 @@ define('APP_PATH', dirname(dirname(__FILE__)));
 define('ONEFOX_PATH', dirname(APP_PATH) . DS . 'onefox');
 
 //--------开启模块模式(Controller目录下含有子目录, 默认开启)--------//
-//define('MODULE_MODE', true);
+define('MODULE_MODE', false);
 
 //--------是否开启调试模式(默认关闭)--------//
 define('DEBUG', true);
