@@ -4,16 +4,16 @@
  * @author ryan<zer0131@vip.qq.com>
  * @desc 默认控制器
  */
-namespace controller\index;
+namespace controller;
 
-use controller\Base;
+use onefox\ViewController;
 
-class Index extends Base {
+class Index extends ViewController  {
     
     /**
      * 默认方法
      */
     public function indexAction(){
-		echo 'ok';
+        $this->show();
     }
 }
