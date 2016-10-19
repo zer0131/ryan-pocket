@@ -6,14 +6,14 @@
  */
 namespace controller;
 
-use onefox\ViewController;
+use onefox\Controller;
 
-class Index extends ViewController  {
-    
+class Index extends Controller {
+
     /**
      * 默认方法
      */
-    public function indexAction(){
+    public function indexAction() {
         $this->show();
     }
 }

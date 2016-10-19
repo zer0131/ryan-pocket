@@ -6,9 +6,9 @@
 
 namespace controller;
 
-use onefox\ViewController;
+use onefox\Controller;
 
-class Passport extends ViewController {
+class Passport extends Controller {
 
     // 登陆[GET]
     public function loginAction() {

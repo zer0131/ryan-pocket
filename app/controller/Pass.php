@@ -6,9 +6,9 @@
 
 namespace controller;
 
-use onefox\ApiController;
+use onefox\Controller;
 
-class Pass extends ApiController {
+class Pass extends Controller {
 
     // 校验登陆[POST]
     public function loginAction() {

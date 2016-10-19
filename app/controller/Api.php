@@ -6,9 +6,9 @@
 
 namespace controller;
 
-use onefox\ApiController;
+use onefox\Controller;
 
-class Api extends ApiController {
+class Api extends Controller {
 
     protected function _init() {
         //
