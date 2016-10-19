@@ -45,6 +45,7 @@ class Passport extends Controller {
             $ret = json_decode($ret, true);
             if ($ret) {
                 // code存入session
+                session('pocket_code', $ret['code']);
                 $redirectUri = 'https://getpocket.com/auth/authorize?request_token='.$ret['code'].'&redirect_uri='.$callbackUri;
                 Response::redirect($redirectUri);
                 break;
