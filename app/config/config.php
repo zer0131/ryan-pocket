@@ -5,7 +5,9 @@
  * @desc: 默认配置文件
  */
 
-$common = array();
+$common = array(
+    'consumer_key' => '59566-5831e047a4cf57261d943ca9'
+);
 
 $online = array();
 
