@@ -7,11 +7,7 @@
 
 $common = array(
     'auto_start' => true,
-    //'name' => '',
-    'path' => APP_PATH . DS . 'session',
-    //'gc_maxlifetime' => 1800,
-    //'cookie_lifetime' => 1800,
-    'cookie_httponly' => 1,
+    'save_path' => APP_PATH . DS . 'session',
 );
 
 $online = array();
