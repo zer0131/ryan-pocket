@@ -6,6 +6,7 @@
 
 namespace controller;
 
+use model\Users;
 use onefox\Config;
 use onefox\Controller;
 use onefox\Curl;
@@ -71,6 +72,9 @@ class Passport extends Controller {
             $ret = json_decode($ret, true);
             if ($ret) {
                 session('has_login', $ret);
+                // 更新或新增用户
+                $usersModel = new Users();
+                $usersModel->saveOrNewUser($ret['username'], $ret['access_token']);
                 Response::redirect('/');
                 break;
             }
