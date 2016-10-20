@@ -10,10 +10,22 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'loader.php';
 class Notice {
 
     public function run() {
-        dumper('');
+        $usersModel = new \model\Users();
+        $userList = $usersModel->getUsers();
+        if (!$userList) {
+            exit;
+        }
+        foreach ($userList as $k => $v) {
+            $data = $this->_noReadData($v['account'], $v['token']);
+            $data && $this->_sendEmail($data);
+        }
     }
 
-    private function newReadList() {
+    private function _noReadData($username, $token) {
+        return array();
+    }
+
+    private function _sendEmail($data) {
         //
     }
 }
