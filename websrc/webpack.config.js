@@ -3,8 +3,8 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        index: './src/index.js',
-        login: './src/login.js'
+        index: './src/index.js'
+        //login: './src/login.js'
     },
     output: {
         filename: '[name].min.js',

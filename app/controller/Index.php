@@ -6,14 +6,13 @@
  */
 namespace controller;
 
-use onefox\Controller;
-
-class Index extends Controller {
+class Index extends Base {
 
     /**
      * 默认方法
      */
     public function indexAction() {
+        $this->assign('username', $this->username);
         $this->show();
     }
 }
