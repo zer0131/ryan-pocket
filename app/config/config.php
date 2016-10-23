@@ -6,7 +6,12 @@
  */
 
 $common = array(
-    'consumer_key' => '59566-5831e047a4cf57261d943ca9'
+    'consumer_key' => '59566-5831e047a4cf57261d943ca9',
+    'mail_host' => 'smtp.163.com',
+    'mail_chartset' => 'UTF-8',
+    'mail_user' => '',
+    'mail_pwd' => '',
+    'mail_fromname' => 'Ryan Porket'
 );
 
 $online = array();

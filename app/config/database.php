@@ -21,14 +21,7 @@ $dev = array(
         'user' => 'root',
         'port' => 3306,
         'password' => '',
-        'dbname' => 'test'
-    ),
-    'test' => array(
-        'host' => 'localhost',
-        'user' => 'root',
-        'port' => 3306,
-        'password' => '',
-        'dbname' => 'test'
+        'dbname' => 'pocket_web'
     )
 );
 
