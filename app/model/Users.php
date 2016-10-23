@@ -14,23 +14,32 @@ class Users extends Model {
 
     // 更新或新增
     public function saveOrNewUser($username, $token) {
-        return true;
+        $info = $this->getUserByAccount($username);
+        if ($info) {
+            return $this->updateUserById($info['id'], array('token' => $token));
+        }
+        $newData = array(
+            'account' => $username,
+            'token' => $token
+        );
+        return $this->insert($newData);
     }
 
     // 获取用户列表
     public function getUsers() {
-        return array();
+        $sql = "select * from $this->table";
+        return $this->db->query($sql);
     }
 
     public function getUserByAccount($username) {
-        return array();
-    }
-
-    public function createUser($data) {
-        return true;
+        $sql = "select * from $this->table where account=:account";
+        $map['account'] = $username;
+        return $this->db->row($sql, $map);
     }
 
     public function updateUserById($id, $data) {
-        return true;
+        $map['id'] = $id;
+        $sql = $this->genUpdateSql($data, $map);
+        return $this->db->query($sql, $map);
     }
 }
