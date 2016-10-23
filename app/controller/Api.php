@@ -39,6 +39,7 @@ class Api extends Base {
         $res = array();
         foreach ($list as $k => $v) {
             $v['origin_url'] = urlencode($v['given_url']);//url参数
+            $v['create_time'] = date('Y-m-d H:i:s', $v['time_added']);
             $res[] = $v;
         }
         $this->json(self::CODE_SUCCESS, 'ok', $res);
@@ -79,5 +80,15 @@ class Api extends Base {
             $num--;
         }
         Response::redirect('/');
+    }
+
+    // 获取用户信息[GET]
+    public function userinfoAction() {
+        $this->json(self::CODE_SUCCESS, 'ok', array('account'=>$this->username));
+    }
+
+    // 新增文章[POST]
+    public function addAction() {
+        //
     }
 }
