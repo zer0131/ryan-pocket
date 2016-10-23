@@ -24,12 +24,12 @@ define('MODULE_MODE', false);
 define('DEBUG', true);
 
 //--------日志目录--------//
-define('LOG_PATH', APP_PATH . DS . 'logs');
+//define('LOG_PATH', APP_PATH . DS . 'logs');
 
 //--------配置目录(默认在app/config目录下)--------//
-define('CONF_PATH', APP_PATH . DS . 'config');
+//define('CONF_PATH', APP_PATH . DS . 'config');
 
 //--------扩展库目录(默认在app/lib目录下)--------//
-define('LIB_PATH', dirname(APP_PATH) . DS . 'class');
+//define('LIB_PATH', dirname(APP_PATH) . DS . 'class');
 
 require_once ONEFOX_PATH . DS . 'Onefox.php';
