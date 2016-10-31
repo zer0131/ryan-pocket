@@ -44,6 +44,7 @@ class DB {
             $msg['raw sql'] = $sql;
         }
         C::log($msg, Log::ERROR);
+        throw new \RuntimeException($message);
     }
 
     public function close() {
